@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_log"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:id="@+id/bar"
+        tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="9dp">
+
+                <ImageView
+                    android:id="@+id/close_eye"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:src="@drawable/z"/>
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:layout_marginTop="9dp">
+
+                <TextView
+                    android:id="@+id/tex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="RUN RAJA RUN"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/edtexs"
+            android:layout_width="348dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Enter Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:paddingLeft="25sp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/send1"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:src="@drawable/hut"-->
+<!--            android:rotation="180"-->
+<!--            android:focusable="true" />-->
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar">
+
+        <!-- FrameLayout to hold ImageView and other views -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ImageView that acts as the background -->
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_background"
+                android:contentDescription="Background Image"/>
+
+            <!-- CardView inside the FrameLayout (over the ImageView) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="16dp">
+
+                <!-- ListView inside the CardView -->
+                <ListView
+                    android:id="@+id/list_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="10sp"
+                    android:background="#ffffff"/> <!-- Optional: transparent background to see the image behind -->
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </GridLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
