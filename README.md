@@ -1,6 +1,6 @@
 # SafeShe – Comprehensive Women's Safety Mobile Application
 
-![SafeShe Demo](Screenshots/demo_screenshot.png)
+![SafeShe Demo](Screenshots/demo_screenshot.jpg)
 
 ## Overview
 SafeShe is a women’s safety Android app developed using **Jetpack Compose** and **Android Studio** to enhance personal security. It allows users to quickly send their live location to emergency contacts and provides additional safety features.
